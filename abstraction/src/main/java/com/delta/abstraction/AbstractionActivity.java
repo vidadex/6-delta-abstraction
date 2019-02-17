@@ -15,6 +15,26 @@ public class AbstractionActivity extends Activity {
         // Start here
         //
 
+        Fan myFan = new Fan();
+        Light myLight = new Light();
+
+        myFan.breakDevice();
+        myLight.breakDevice();
+
+        Switch mySwitch = new Switch();
+
+        mySwitch.wireUp(myFan);
+        mySwitch.wireUp(myLight);
+
+
+        //Now Call Back is now used
+        mySwitch.flipSwitchUp();
+        mySwitch.flipSwitchDown();
+
+        mySwitch.unWire(myFan);
+
+        mySwitch.flipSwitchUp();
+        mySwitch.flipSwitchDown();
 
     }
 
